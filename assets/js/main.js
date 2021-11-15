@@ -19,4 +19,10 @@ $(document).ready(function() {
             scrollbar: true
         });
     }
+
+    $(document).on('click', '.delete-btn', function(ev) {
+        if (!confirm('Сигурни ли сте, че искате да изтриете избраната задача?')) {
+            ev.preventDefault();
+        }
+    })
 });

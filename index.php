@@ -9,7 +9,7 @@
     {
         $con = DbHelper::GetConnection();
 
-        $query = "SELECT * FROM tasks";
+        $query = "SELECT * FROM tasks ORDER BY id DESC";
         $stm = $con->prepare($query);
         $stm->execute();
         $tasks = $stm->fetchAll(PDO::FETCH_ASSOC);
